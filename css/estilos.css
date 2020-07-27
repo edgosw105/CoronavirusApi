@@ -1,0 +1,152 @@
+body{
+  font-family: Arial;
+  text-align: center;
+}
+
+h2{
+  font-family: 'Vast Shadow', cursive;
+  text-align: center;
+}
+
+span, p, select, input{
+  font-family: 'Sniglet', cursive;
+  font-size: 1.2em;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 85px auto auto auto auto;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #eaeff7;
+}
+
+.logo{
+  height: 40px;
+  width: 50px;
+  margin: 0;
+  /* grid-column: 1 / 2; */
+  display: inline;
+}
+
+.logo img{
+  height: 100%;
+}
+
+.title{
+  font-family: 'Indie Flower';
+  font-size: 3em;
+}
+
+.header{
+  grid-column: 1 / -1;
+  margin:  20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.seleccion{
+  text-align: center;
+  padding-top: 15px;
+  display: grid;
+  justify-content: center;
+}
+
+.seleccion input,
+.seleccion select,
+.seleccion label{
+  height: 2em;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.seleccion label:nth-of-type(2){
+  margin-top: 15px; 
+}
+
+.seleccion select
+{
+  /* margin-right: 20px; */
+}
+
+
+.hero{
+  grid-column: 1 / -1;
+  margin: 10px 0;
+}
+
+
+
+.datosPais{
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  background-color: #e3eaf7;
+}
+
+.datosPais h2{
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.datosPais span:nth-of-type(1){
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.datosPais span{
+  margin: 10px 0;
+}
+
+.datosPaisActualizados{
+  grid-row: 4 / 5;
+  grid-column: 1 / -1;
+
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+
+}
+
+.datosMundo{
+  grid-row: 5 / 6;
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr auto;
+  /* justify-items: center; */
+  align-items: center;
+  background-color: #e3eaf7;
+}
+
+.datosMundo h2{
+  grid-column: 1 / -1;
+}
+
+.datosMundo h2,
+.datosMundo p
+{
+  text-align: center;
+}
+
+footer{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  background-color: #eaeff7;
+  max-width: 1024px;
+  margin: 10px auto;
+}
+
+footer span{
+  padding: 5px;
+  width: 100%;
+}
