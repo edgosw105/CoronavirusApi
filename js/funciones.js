@@ -18,8 +18,16 @@ function cargarDatosPais(){
   //Cargo Datos según la fecha:
   datosPorPais()
   .then((paisx) => {
-    // console.log(paisx);
+    console.log(paisx);
+
+
+
     let fecha = document.getElementById('fecha');
+
+    //CONTROLO EL calendario
+    fecha.min = paisx[0].Date.substring(0, 10);
+    fecha.max = paisx[paisx.length-1].Date.substring(0, 10);
+
     let datosDia = paisx.find(pais => pais.Date.substring(0,10) == fecha.value)
     let spanConfirmadosPais = document.getElementById('spanConfirmadosPais');
     let spanActivosPais = document.getElementById('spanActivosPais');
