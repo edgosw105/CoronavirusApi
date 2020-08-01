@@ -38,7 +38,8 @@ function cargarDatosPais(){
     spanMuertesPais.innerText = datosDia.Deaths.toLocaleString();
     spanRecuperadosPais.innerText = datosDia.Recovered.toLocaleString();
   }).
-  catch((e) => alert(e))
+  // catch((e) => alert(e))
+  catch((e) => swal('Atención', e, 'error'));
 }
 
 function datosPorPais(){
@@ -53,7 +54,8 @@ function datosPorPais(){
 //Actualiza la fecha en el calendario
 function llenarFecha(){
   let hoy = new Date();
-  let dia = hoy.getDate()-1;
+  hoy.setDate(hoy.getDate()-1);
+  let dia = hoy.getDate();
   let mes = hoy.getMonth()+1;
   if (dia < 10) {
     dia = '0' + dia;
@@ -82,7 +84,8 @@ function imprimirResumen(){
     llenarDatosMundo(resumenDatos.Global);
   })
   // .catch((e) => alert('asdsadas'))
-   .catch((e) => alert(`${e.statusText}, ${e.responseJSON.message}`))
+   // .catch((e) => alert(`${e.statusText}, ${e.responseJSON.message}`))
+   .catch((e) => swal('Atención', `${e.statusText}, ${e.responseJSON.message}`, 'error'));
 }
 
 function llenarDatosMundo(globales){
@@ -106,7 +109,8 @@ function llenarPaises(){
     comboPaises.value = 'colombia'
     cargarDatosPais();
   } catch (e) {
-    alert(e)
+    // alert(e)
+    swal('atencion', e, 'error');
   }
 }
 
@@ -128,7 +132,8 @@ function llenarDatosActualizados(){
     let spanPais = document.getElementById('spanPais');
     spanPais.innerText = paisx.Country;
   } catch (e) {
-    alert(e);
+    // alert(e);
+    swal('Atención', e, 'error');
   }
 }
 
